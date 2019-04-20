@@ -1,11 +1,11 @@
-// import React from 'react'
+import React from 'react'
 
-// const Sell = () => {
-//   return (
-//     <div>
-//       This is Sell
-//     </div>
-//   )
-// }
+const Sell = () => {
+  return (
+    <div>
+      This is Sell
+    </div>
+  )
+}
 
-// export default Sell
+export default Sell
