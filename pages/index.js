@@ -1,13 +1,13 @@
 import React from "react";
-import Home from './Home';
+import ItemsList from '../components/ItemsList';
 
 
-const index = () => {
+const Home = props => {
   return (
     <div>
-      <Home/>
+      <ItemsList />
     </div>
   )
 };
 
-export default index;
+export default Home;

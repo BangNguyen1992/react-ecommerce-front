@@ -1,6 +1,7 @@
 // A custom Document is commonly used to augment your application's <html> and <body> tags.
 import Document from "next/document";
 import { ServerStyleSheet } from "styled-components";
+import { Fragment } from "react";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -17,10 +18,10 @@ export default class MyDocument extends Document {
       return {
         ...initialProps,
         styles: (
-          <>
+          <Fragment>
             {initialProps.styles}
             {sheet.getStyleElement()}
-          </>
+          </Fragment>
         )
       };
     } finally {
