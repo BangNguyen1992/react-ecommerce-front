@@ -25,7 +25,7 @@ const Item = ({ item }) => {
       <div className="buttonList">
         <Link
           href={{
-            pathname: "update",
+            pathname: "/update",
             query: { name: transformUrlString(item.title), id: item.id },
           }}
         >
