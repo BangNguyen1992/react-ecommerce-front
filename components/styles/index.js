@@ -8,7 +8,7 @@ import SickButton from "./SickButton";
 import Supreme from "./Supreme";
 import Table from "./Table";
 import Title from "./Title";
-import Form from "./Form";
+import * as Form from "./Form";
 import * as DropDown from "./DropDown";
 import CloseButton from "./CloseButton";
 import CartStyles from "./CartStyles";

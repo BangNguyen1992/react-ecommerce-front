@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 const loading = keyframes`
   from {
@@ -12,7 +12,14 @@ const loading = keyframes`
   }
 `;
 
-const Form = styled.form`
+export const ErrorMessage = styled.div`
+  position: absolute;
+  color: #ff3019;
+  font-size: 1rem;
+  padding-top: 0.2rem;
+`;
+
+export const Form = styled.form`
   box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.05);
   background: rgba(0, 0, 0, 0.02);
   border: 5px solid white;
@@ -22,7 +29,7 @@ const Form = styled.form`
   font-weight: 600;
   label {
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   input,
   textarea,
@@ -33,11 +40,11 @@ const Form = styled.form`
     border: 1px solid black;
     &:focus {
       outline: 0;
-      border-color: ${props => props.theme.red};
+      border-color: ${(props) => props.theme.red};
     }
   }
   button,
-  input[type='submit'] {
+  input[type="submit"] {
     width: auto;
     background: red;
     color: white;
@@ -55,11 +62,16 @@ const Form = styled.form`
     }
     &::before {
       height: 10px;
-      content: '';
+      content: "";
       display: block;
-      background-image: linear-gradient(to right, #ff3019 0%, #e2b04a 50%, #ff3019 100%);
+      background-image: linear-gradient(
+        to right,
+        #ff3019 0%,
+        #e2b04a 50%,
+        #ff3019 100%
+      );
     }
-    &[aria-busy='true']::before {
+    &[aria-busy="true"]::before {
       background-size: 50% auto;
       animation: ${loading} 0.5s linear infinite;
     }
