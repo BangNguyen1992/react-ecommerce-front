@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import gql from "graphql-tag";
+// import gql from "graphql-tag";
 import styled, { ThemeProvider, injectGlobal } from "styled-components";
 // import { Query } from 'react-apollo'
-import { useQuery } from "@apollo/react-hooks";
+import {gql,  useQuery } from "@apollo/client";
 import Item from "./Item";
 import { Center } from "./styles";
 
@@ -35,7 +35,7 @@ const ItemsList = (props) => {
 
 ItemsList.propTypes = {};
 
-const ALL_ITEMS_QUERY = gql`
+export const ALL_ITEMS_QUERY = gql`
   query ALL_ITEMS_QUERY {
     items {
       id
